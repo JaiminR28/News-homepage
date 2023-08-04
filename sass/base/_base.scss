@@ -12,5 +12,23 @@ html {
 
 body {
 	box-sizing: border-box;
-	padding: 3rem;
+	font-family: $default-font;
+	color: $color-grey-blue-light;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr [header-start] min-content [header-end main-start] minmax(
+			min-content,
+			70vh
+		) [main-end] 1fr;
+	grid-template-columns:
+		minmax(12rem, 1fr) [center-start] repeat(
+			8,
+			[col-start] minmax(min-content, 12rem) [col-end]
+		)
+		[center-end] minmax(12rem, 1fr);
 }
