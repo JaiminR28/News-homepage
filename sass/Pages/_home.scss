@@ -1,5 +1,5 @@
 .content {
-	background-color: beige;
+	// background-color: beige;
 
 	display: grid;
 	grid-column: center-start / center-end;
@@ -13,18 +13,35 @@
 
 .Blog {
 	grid-column: 1 / span 5;
-	background-color: pink;
 
 	&__img {
 		width: 100%;
 	}
 
 	&__content {
+		margin-top: 2rem;
 		display: flex;
-	}
+		justify-content: space-between;
 
-	&__title {
-		font-size: 6rem;
+		&--title {
+			font-size: 6.4rem;
+			font-weight: 800;
+			line-height: 1;
+			width: 55%;
+			letter-spacing: 0.02em;
+			color: $color-dark-blue;
+		}
+
+		&--discription {
+			font-size: 1.6rem;
+			line-height: 1.6;
+			width: 40%;
+
+			display: flex;
+
+			flex-direction: column;
+			justify-content: space-between;
+		}
 	}
 }
 
