@@ -19,11 +19,11 @@ body {
 }
 
 .container {
-	height: 100vh;
+	min-height: 100vh;
 	display: grid;
 	grid-template-rows:
 		1fr [header-start] min-content [header-end main-start] minmax(
-			min-content,
+			max-content,
 			70vh
 		)
 		[main-end] 1fr;
