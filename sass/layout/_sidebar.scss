@@ -1,0 +1,33 @@
+.sidebar {
+	grid-column: 6 / -1;
+	background-color: $color-dark-blue;
+	padding: 2rem;
+
+	&__title {
+		color: $color-primary-orange;
+		font-size: 4rem;
+		margin-bottom: 1.8rem;
+	}
+
+	&__blog {
+		& + & {
+			margin-top: 3rem;
+		}
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-grey-blue-dark;
+		}
+
+		&--title {
+			color: #fff;
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
+
+		&--discription {
+			font-size: 1.3rem;
+			color: $color-very-light-orange;
+			margin-bottom: 3rem;
+		}
+	}
+}
