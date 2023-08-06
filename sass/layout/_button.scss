@@ -1,0 +1,19 @@
+.btn {
+	padding: 1.6rem 2.3rem;
+	background-color: $color-primary-red;
+	color: #fff;
+	border: 1.5px solid $color-primary-red;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	font-weight: 700;
+	cursor: pointer;
+	transition: outline-width 200ms ease, outline-offset 200ms ease;
+
+	&:hover,
+	&:focus {
+		outline: 1.5px solid $color-primary-orange;
+		outline-width: 8px;
+		outline-offset: -8px;
+	}
+}
