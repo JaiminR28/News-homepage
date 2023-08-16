@@ -23,14 +23,13 @@ body {
 	display: grid;
 	grid-template-rows:
 		3rem [header-start] min-content [header-end main-start] minmax(
-			max-content,
-			70vh
+			min-content
 		)
-		[main-end] 8rem;
+		[main-end] 12rem;
 	grid-template-columns:
 		minmax(12rem, 1fr) [center-start] repeat(
 			8,
-			[col-start] minmax(min-content, 14rem) [col-end]
+			[col-start] minmax(min-content, 16rem) [col-end]
 		)
 		[center-end] minmax(12rem, 1fr);
 }
