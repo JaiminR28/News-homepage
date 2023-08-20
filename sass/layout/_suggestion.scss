@@ -1,17 +1,22 @@
 .suggestion {
 	grid-column: 1 / -1;
-	height: 12rem;
+	grid-row: suggestion-start / suggestion-end;
+	margin-top: 5rem;
 
-	display: grid;
-	grid-gap: 2rem;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	justify-content: space-between;
 
 	&__box {
 		display: flex;
 		align-items: center;
+		width: 30%;
 
 		&--img {
 			width: 100%;
+
+			@include respond(tab-land) {
+				width: 60%;
+			}
 		}
 	}
 

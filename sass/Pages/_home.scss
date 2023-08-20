@@ -7,12 +7,20 @@
 
 	grid-template-columns: repeat(7, 1fr);
 
-	grid-template-rows: [main-blog-start] minmax(min-content, 70vh) [main-blog-end] 30vh;
+	grid-template-rows:
+		[main-blog-start] minmax(min-content, 70vh)
+		[main-blog-end suggestion-start] minmax(min-content, 3rem)
+		[suggestion-end];
 	grid-gap: 6rem;
+
+	@include respond(tab-land) {
+		grid-gap: 2rem;
+	}
 }
 
 .Blog {
 	grid-column: 1 / span 5;
+	grid-row: main-blog-start / main-blog-end;
 
 	&__img {
 		width: 100%;
@@ -22,6 +30,10 @@
 		margin-top: 2rem;
 		display: flex;
 		justify-content: space-between;
+
+		@include respond(tab-land) {
+			margin-top: 6rem;
+		}
 
 		&--title {
 			font-size: 6.4rem;

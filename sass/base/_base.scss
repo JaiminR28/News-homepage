@@ -8,6 +8,20 @@
 
 html {
 	font-size: 62.5%;
+
+	@include respond(big-desktop) {
+		font-size: 50%; // 1rem = 12px
+	}
+
+	@include respond(tab-land) {
+		// width < 900
+		font-size: 56.25%; // 1rem = 9px
+	}
+
+	@include respond(tab-port) {
+		// width < 600
+		font-size: 50%; // 1rem = 8px
+	}
 }
 
 body {
@@ -23,13 +37,14 @@ body {
 	display: grid;
 	grid-template-rows:
 		3rem [header-start] min-content [header-end main-start] minmax(
+			12rem,
 			min-content
 		)
 		[main-end] 12rem;
 	grid-template-columns:
-		minmax(12rem, 1fr) [center-start] repeat(
+		minmax(8rem, 1fr) [center-start] repeat(
 			8,
 			[col-start] minmax(min-content, 16rem) [col-end]
 		)
-		[center-end] minmax(12rem, 1fr);
+		[center-end] minmax(8rem, 1fr);
 }
